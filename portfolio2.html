@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b16;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #111122;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #a78bfa;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a78bfa;
+        }
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 65px);
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #a78bfa;
+        }
+
+        .hero p {
+            color: #b8b8c9;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #8b5cf6;
+            color: white;
+            padding: 14px 28px;
+            margin-top: 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            width: fit-content;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #6d28d9;
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+            color: #a78bfa;
+        }
+
+        .about p {
+            color: #c5c5d5;
+            line-height: 1.9;
+            max-width: 750px;
+        }
+
+        .skills, .projects {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #17172a;
+            padding: 25px;
+            border: 1px solid #292943;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #8b5cf6;
+        }
+
+        .card h3 {
+            color: #c4b5fd;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaaabd;
+            line-height: 1.6;
+        }
+
+        .contact p {
+            color: #c5c5d5;
+            margin: 15px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111122;
+            color: #999;
+        }
+
+        @media(max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MyPortfolio.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <p>Hello, I'm</p>
+    <h1>Your <span>Name</span></h1>
+    <h2>I'm a Web Developer</h2>
+    <p>
+        I create beautiful, modern and responsive websites.
+        Welcome to my personal portfolio!
+    </p>
+    <a href="#projects" class="btn">Explore My Work</a>
+</section>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+        Hi! I'm Your Name. I am passionate about technology,
+        programming and web development. I enjoy creating
+        innovative projects and learning new technologies.
+        My goal is to build useful and creative digital experiences.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Building website structure.</p>
+        </div>
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Creating beautiful designs.</p>
+        </div>
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Adding interactive features.</p>
+        </div>
+        <div class="card">
+            <h3>Python</h3>
+            <p>Programming and problem solving.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Project 01</h3>
+            <p>My first creative website project.</p>
+        </div>
+        <div class="card">
+            <h3>Project 02</h3>
+            <p>A responsive web application.</p>
+        </div>
+        <div class="card">
+            <h3>Project 03</h3>
+            <p>A useful JavaScript application.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: yourname@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>GitHub: github.com/yourusername</p>
+    <a href="mailto:yourname@gmail.com" class="btn">
+        Let's Connect
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Your Name | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
